@@ -60,14 +60,17 @@ const Hero = () => {
       <Container>
         <Row className="align-items-center min-vh-100">
           <Col lg={6} md={12} className="mb-4 mb-lg-0" data-aos="fade-right">
-            <h1 className="display-3 fw-bold text-light" style={{ fontSize: "65px" }}>
+            <h1
+              className="display-3 fw-bold text-light"
+              style={{ fontSize: "65px" }}
+            >
               Hi, {displayText}
               {showCursor && <span className="text-light">|</span>}
             </h1>
             <h2 className="h3 text-light mb-4" style={{ color: "black" }}>
               Frontend Developer
             </h2>
-            <motion.p 
+            <motion.p
               className="lead text-light mb-4"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -83,7 +86,11 @@ const Hero = () => {
               evolving, and contributing to innovative projects. Determined to
               bring fresh energy and creativity to dynamic development teams.
             </motion.p>
-            <motion.button
+            <motion.a
+              href="../../public/Resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              download="Resume.pdf"
               whileHover={{
                 scale: 1.1,
                 boxShadow: "0px 8px 15px rgba(128, 0, 128, 0.5)",
@@ -93,6 +100,7 @@ const Hero = () => {
               }}
               className="me-3"
               style={{
+                textDecoration: "none",
                 backgroundColor: "#800080",
                 border: "none",
                 padding: "10px 20px",
@@ -102,11 +110,11 @@ const Hero = () => {
                 borderRadius: "8px",
                 boxShadow: "0px 4px 10px rgba(128, 0, 128, 0.5)",
                 transition: "all 0.3s ease-in-out",
-                width: "fit-content"
+                width: "fit-content",
               }}
             >
               Download Resume
-            </motion.button>
+            </motion.a>
           </Col>
           <Col lg={6} md={12} data-aos="fade-left">
             <div
