@@ -1,0 +1,108 @@
+.projects-section {
+  overflow-x: hidden;
+  width: 100%;
+}
+
+.projects-slider {
+  padding: 50px 0;
+}
+
+.tech-badge {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
+}
+
+.tech-badge:hover {
+  transform: translateY(-2px);
+  background-color: rgba(255, 255, 255, 0.2) !important;
+}
+
+.slick-dots {
+  bottom: -60px;
+}
+
+.slick-dots li.slick-active div {
+  background-color: #6b46c1 !important;
+  opacity: 1 !important;
+  transform: scale(1.2);
+}
+
+.slick-dots li div:hover {
+  opacity: 0.7 !important;
+}
+
+.slick-slide {
+  transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  opacity: 1 !important;
+}
+
+.slick-track {
+  display: flex;
+  align-items: center;
+}
+
+.custom-select {
+  background: linear-gradient(145deg, #2d1b69, #1c103f);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12' fill='none'%3E%3Cpath d='M2.5 4.5L6 8L9.5 4.5' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  color: white;
+  border: 1px solid rgba(107, 70, 193, 0.3);
+  padding: 8px 32px 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  max-width: 200px;
+  appearance: none;
+  font-size: 0.95rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.custom-select:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(107, 70, 193, 0.5), 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-color: rgba(107, 70, 193, 0.8);
+}
+
+.custom-select:hover {
+  border-color: rgba(107, 70, 193, 0.8);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+.custom-select option {
+  background-color: #433166;
+  color: white;
+  padding: 8px;
+}
+
+@media (max-width: 768px) {
+  .projects-slider {
+    padding: 30px 0;
+  }
+
+  .display-4 {
+    font-size: 2rem;
+  }
+
+  .card {
+    margin: 0;
+  }
+
+  .project-image {
+    max-height: 200px !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .container {
+    padding: 0 10px;
+  }
+
+  .card {
+    border-radius: 0;
+  }
+}
