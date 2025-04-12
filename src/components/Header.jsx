@@ -5,7 +5,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 const Header = () => {
   const socialLinks = [
     { icon: <FaFacebook />, url: "https://www.facebook.com/share/1DFrGUhdcV/" },
-    { icon: <FaLinkedin />, url: "#" },
+    { icon: <FaLinkedin />, url: "https://www.linkedin.com/in/humam-safi-9860a2360/" },
     { icon: <FaInstagram />, url: "https://www.instagram.com/humam__safi?igsh=MTgzY3lnZWs3czAzOQ==" },
     { icon: <FaGithub />, url: "https://github.com/Humam-Safi" },
   ];
