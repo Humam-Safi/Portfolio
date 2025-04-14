@@ -5,7 +5,24 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import profileImage from "../assets/profile.jpg";
 
+const url = "https://humam-safi.vercel.app/Resume.pdf";
+
 const Hero = () => {
+  const text = "Humam Safi";
+  const [displayText, setDisplayText] = useState("");
+  const [showCursor, setShowCursor] = useState(true);
+
+
+  const handleDownload = (url) => {
+    const filename = url.split("/").pop();
+    const link = document.createElement("a");
+    link.href = url;
+    link.setAttribute("download", filename);
+    document.body.appendChild(link);
+    link.click();
+    link.remove();
+  };
+
   useEffect(() => {
     AOS.init({
       duration: 1000,
@@ -13,9 +30,6 @@ const Hero = () => {
     });
   }, []);
 
-  const text = "Humam Safi";
-  const [displayText, setDisplayText] = useState("");
-  const [showCursor, setShowCursor] = useState(true);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -91,11 +105,8 @@ const Hero = () => {
               evolving, and contributing to innovative projects. Determined to
               bring fresh energy and creativity to dynamic development teams.
             </motion.p>
-            <motion.a
-              href="../../public/Resume.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
-              download="Resume.pdf"
+            <motion.button
+              onClick={() => handleDownload(url)}
               whileHover={{
                 scale: 1.1,
                 boxShadow: "0px 8px 15px rgba(128, 0, 128, 0.5)",
@@ -119,7 +130,7 @@ const Hero = () => {
               }}
             >
               Download Resume
-            </motion.a>
+            </motion.button>
           </Col>
           <Col lg={6} md={12} className="mb-5 mb-lg-0" data-aos="fade-left">
             <div
