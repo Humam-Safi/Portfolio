@@ -13,7 +13,7 @@ const Hero = () => {
     });
   }, []);
 
-  const text = "I'm Humam Safi";
+  const text = "Humam Safi";
   const [displayText, setDisplayText] = useState("");
   const [showCursor, setShowCursor] = useState(true);
 
@@ -58,13 +58,18 @@ const Hero = () => {
   return (
     <section className="py-5" id="home">
       <Container>
-        <Row className="align-items-center min-vh-100">
+        <Row className="align-items-center min-vh-100 flex-column-reverse flex-lg-row">
           <Col lg={6} md={12} className="mb-4 mb-lg-0" data-aos="fade-right">
             <h1
               className="display-3 fw-bold text-light"
-              style={{ fontSize: "65px" }}
+              style={{
+                fontSize: "clamp(2rem, 4vw, 4rem)",
+                lineHeight: "1.2",
+                marginBottom: "1rem",
+              }}
             >
-              Hi, {displayText}
+              <span className="text-light">Hi, I'm </span>
+              <span style={{ color: "#800080" }}>{displayText}</span>
               {showCursor && <span className="text-light">|</span>}
             </h1>
             <h2 className="h3 text-light mb-4" style={{ color: "black" }}>
@@ -116,10 +121,13 @@ const Hero = () => {
               Download Resume
             </motion.a>
           </Col>
-          <Col lg={6} md={12} data-aos="fade-left">
+          <Col lg={6} md={12} className="mb-5 mb-lg-0" data-aos="fade-left">
             <div
               className="hero-image"
               style={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
                 maxWidth: "500px",
                 width: "100%",
                 height: "auto",

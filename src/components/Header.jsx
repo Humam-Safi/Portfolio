@@ -22,17 +22,21 @@ const Header = () => {
               <a
                 key={index}
                 href={link.url}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-white fs-5 social-link"
                 style={{
                   transition: 'all 0.3s ease',
+                  display: 'inline-block',
+                  transform: 'scale(1)',
                 }}
                 onMouseEnter={(e) => {
-                  e.target.style.color = '#6366f1';
-                  e.target.style.transform = 'scale(1.2)';
+                  e.currentTarget.style.color = '#6366f1';
+                  e.currentTarget.style.transform = 'scale(1.2)';
                 }}
                 onMouseLeave={(e) => {
-                  e.target.style.color = 'white';
-                  e.target.style.transform = 'scale(1)';
+                  e.currentTarget.style.color = 'white';
+                  e.currentTarget.style.transform = 'scale(1)';
                 }}
               >
                 {link.icon}
