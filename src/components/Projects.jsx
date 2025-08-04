@@ -13,12 +13,29 @@ import pro8 from "../assets/pro8.png";
 import pro9 from "../assets/pro9.png";
 import pro10 from "../assets/pro10.png";
 import pro11 from "../assets/pro11.png";
+import pro12 from "../assets/pro12.png";
 
 const Projects = () => {
   const [filteredProjects, setFilteredProjects] = useState([]);
   const [selectedTech, setSelectedTech] = useState("all");
 
   const projects = [
+    {
+      title: "Omranak",
+      description: "Real Estate website that connects sellers and buyers easily",
+      image: pro12,
+      tech: [
+        "Html",
+        "Css",
+        "React Js",
+        "tailwind css",
+        "Leaflet",
+        "React-image-gallery",
+        "Formik",
+        "Yup",
+      ],
+      link: "https://omranak.com",
+    },
     {
       title: "E-Commerce",
       description: "E-Commerce With Dashboard And all authintcation method ",
@@ -37,32 +54,11 @@ const Projects = () => {
       link: "https://humam-eshop.vercel.app/",
     },
     {
-      title: "Leon Template",
-      description: "Html And Css Template Simple Design With Full Responsive",
-      image: pro7,
-      tech: ["Html", "Css"],
-      link: "https://first-template-three.vercel.app/",
-    },
-    {
       title: "IMDb Clone",
       description: "Film Clone similar as IMDb Clone With Redux",
       image: pro2,
       tech: ["Html", "Css", "React Js", "Redux Toolkit", "Tailwind"],
       link: "https://imdb-clone-films.vercel.app/",
-    },
-    {
-      title: "Weather App",
-      description: "Small Weather App With Real Weather Api",
-      image: pro3,
-      tech: ["Html", "Css", "JavaScript"],
-      link: "https://weather-app-three-inky-75.vercel.app/",
-    },
-    {
-      title: "Master Template",
-      description: "Html And Css Template Simple Design With Full Responsive",
-      image: pro6,
-      tech: ["Html", "Css"],
-      link: "https://third-template-nine.vercel.app/",
     },
     {
       title: "Notes App",
@@ -78,6 +74,27 @@ const Projects = () => {
         "BootStrap",
       ],
       link: "https://register-notes-app.vercel.app/",
+    },
+    {
+      title: "Leon Template",
+      description: "Html And Css Template Simple Design With Full Responsive",
+      image: pro7,
+      tech: ["Html", "Css"],
+      link: "https://first-template-three.vercel.app/",
+    },
+    {
+      title: "Weather App",
+      description: "Small Weather App With Real Weather Api",
+      image: pro3,
+      tech: ["Html", "Css", "JavaScript"],
+      link: "https://weather-app-three-inky-75.vercel.app/",
+    },
+    {
+      title: "Master Template",
+      description: "Html And Css Template Simple Design With Full Responsive",
+      image: pro6,
+      tech: ["Html", "Css"],
+      link: "https://third-template-nine.vercel.app/",
     },
     {
       title: "Kasper Template",
